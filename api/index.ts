@@ -10,8 +10,8 @@ import methodOverride = require("method-override");
 
 let api = express();
 
-// api.set('port', (process.env.PORT || 5000));
-api.set('port', 5000);
+api.set('port', (process.env.PORT || 5000));
+// api.set('port', 5000);
 
 api.get('/', function (request, response) {
   response.json('Hello');
