@@ -26,11 +26,10 @@
     "nodemon": "^1.11.0",
     "ts-node": "^3.0.2",
     "typescript": "^2.2.2",
-    "url": "^0.11.0"
-  },
-  "devDependencies": {
+    "url": "^0.11.0",
     "@types/node": "^7.0.12"
   },
+  "devDependencies": {},
   "engines": {
     "node": "^7.0.12",
     "npm": "^4.0.5"
