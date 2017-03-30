@@ -20,7 +20,6 @@ api.get('/', function (req, res) {
 });
 
 api.get('/movie/:id', function (req, res) {
-  console.log(req.params.id);
   TmdbApi.request('/movie/' + req.params.id).then((data) => {
     res.send(data);
   });
