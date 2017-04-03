@@ -3,16 +3,19 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Page One</ion-title>
+    <ion-title>Tivika</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  <h3>Ionic Menu Starter</h3>
+  <h3>Discover</h3>
 
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
-  </p>
+  <div class="cards">
+    <div class="movie" *ngFor="let movie of movies">
+      <img [src]="movie.picture" alt="">
+      <h5>{{movie.title}}</h5>
+    </div>
+  </div>
 
   <button ion-button secondary menuToggle>Toggle Menu</button>
 </ion-content>
