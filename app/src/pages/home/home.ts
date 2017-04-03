@@ -3,6 +3,7 @@ import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
 
 import { NavController } from 'ionic-angular';
+import { Movie } from "../movie/movie";
 
 @Component({
   selector: 'homepage',
@@ -16,10 +17,15 @@ export class Home {
       .map(res => res.json().results)
       .subscribe(movies => {
         movies.forEach(movie => {
-          movie.picture = 'https://image.tmdb.org/t/p/w500' + movie.poster_path
+          movie.poster = 'https://image.tmdb.org/t/p/w500' + movie.poster_path
+          movie.backdrop = 'https://image.tmdb.org/t/p/w500' + movie.backdrop_path
         });
         console.log(movies);
         this.movies = movies;
       });
+  }
+
+  displayMovie(movie) {
+    this.navCtrl.push(Movie, movie);
   }
 }

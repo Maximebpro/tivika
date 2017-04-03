@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>{{ movie.title }}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <img [src]="movie.backdrop" />
+    <ion-card-header><ion-icon name="star-outline"></ion-icon>&nbsp;{{ movie.vote_average }}/10</ion-card-header>
+    <ion-card-content>
+      <ion-card-title>{{ movie.overview }}</ion-card-title>
+      <!--<p>happy, heart, podium, ribbon, sad, star, star-outline, stats, thumbs-up, trending-up</p>-->
+      <!--<p>{{movie|json}}</p>-->
+    </ion-card-content>
+  </ion-card>
+</ion-content>

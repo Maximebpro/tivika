@@ -1,7 +1,7 @@
 import { NgModule, ErrorHandler } from '@angular/core';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
-import { Page2 } from '../pages/page2/page2';
+import { Movie } from '../pages/movie/movie';
 import { Home } from "../pages/home/home";
 
 import { StatusBar } from '@ionic-native/status-bar';
@@ -11,7 +11,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   declarations: [
     MyApp,
     Home,
-    Page2
+    Movie
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -20,7 +20,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   entryComponents: [
     MyApp,
     Home,
-    Page2
+    Movie
   ],
   providers: [
     StatusBar,
