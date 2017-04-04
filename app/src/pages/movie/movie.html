@@ -10,9 +10,13 @@
 <ion-content>
   <ion-card>
     <img [src]="movie.backdrop" />
-    <ion-card-header><ion-icon name="star-outline"></ion-icon>&nbsp;{{ movie.vote_average }}/10</ion-card-header>
     <ion-card-content>
-      <ion-card-title>{{ movie.overview }}</ion-card-title>
+      <ion-card-title>
+        <ion-icon *ngIf="movie.vote_average > 5" name="trending-up"></ion-icon>
+        <ion-icon *ngIf="movie.vote_average <= 5" name="trending-down"></ion-icon>
+        <span>{{ movie.vote_average }}/10</span>
+      </ion-card-title>
+      <p>{{ movie.overview }}</p>
       <!--<p>happy, heart, podium, ribbon, sad, star, star-outline, stats, thumbs-up, trending-up</p>-->
       <!--<p>{{movie|json}}</p>-->
       <button (click)="onRate('Love')" ion-button full item-right icon-left color="love"><ion-icon name="heart"></ion-icon>It was great<ion-icon *ngIf="isRated('Love')" name="checkmark-circle"></ion-icon></button>

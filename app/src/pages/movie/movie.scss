@@ -1,4 +1,19 @@
 moviepage {
+  .card-title {
+    background: rgba(black, 0.1);
+    width: 100px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    span {
+      margin-left: 5px;
+    }
+  }
+  .card-content {
+    p {
+      margin: 13px 0;
+    }
+  }
   .button-inner {
     position: relative;
     ion-icon[name=checkmark-circle] {
