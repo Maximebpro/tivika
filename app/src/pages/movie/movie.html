@@ -15,6 +15,10 @@
       <ion-card-title>{{ movie.overview }}</ion-card-title>
       <!--<p>happy, heart, podium, ribbon, sad, star, star-outline, stats, thumbs-up, trending-up</p>-->
       <!--<p>{{movie|json}}</p>-->
+      <button (click)="onRate('Love')" ion-button full item-right icon-left color="love"><ion-icon name="heart"></ion-icon>It was great<ion-icon *ngIf="isRated('Love')" name="checkmark-circle"></ion-icon></button>
+      <button (click)="onRate('Like')" ion-button full item-right icon-left color="like"><ion-icon name="happy"></ion-icon>It was good<ion-icon *ngIf="isRated('Like')" name="checkmark-circle"></ion-icon></button>
+      <button (click)="onRate('Dislike')" ion-button full item-right icon-left color="bad"><ion-icon name="sad"></ion-icon>It was not so good<ion-icon *ngIf="isRated('Dislike')" name="checkmark-circle"></ion-icon></button>
+      <button (click)="onRate('Hate')" ion-button full item-right icon-left color="terrible"><ion-icon name="thumbs-down"></ion-icon>I was really bad<ion-icon *ngIf="isRated('Hate')" name="checkmark-circle"></ion-icon></button>
     </ion-card-content>
   </ion-card>
 </ion-content>
