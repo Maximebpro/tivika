@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
-
 import { NavController } from 'ionic-angular';
+
 import { Movie } from "../movie/movie";
 
 @Component({
@@ -13,7 +13,8 @@ export class Home {
   public movies;
 
   constructor(public navCtrl: NavController, http: Http) {
-    http.get('/api')
+    // http.get('/api')
+    http.get('https://tivika-api.herokuapp.com/')
       .map(res => res.json().results)
       .subscribe(movies => {
         movies.forEach(movie => {
