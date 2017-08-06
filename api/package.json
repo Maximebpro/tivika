@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.ts",
   "scripts": {
-    "start": "nodemon --exec ./node_modules/.bin/ts-node -- ./index.ts",
-    "build": "ts-node index.ts",
-    "tslint": "tslint",
+    "start": "nodemon --exec ./node_modules/.bin/ts-node -- ./src/index.ts",
+    "build": "ts-node src/index.ts",
+    "tslint": "tslint --format stylish src/* || true",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -26,6 +26,7 @@
     "express": "^4.15.2",
     "method-override": "^2.3.7",
     "nodemon": "^1.11.0",
+    "pg": "^6.1.5",
     "request": "^2.81.0",
     "request-promise": "^4.2.0",
     "ts-node": "^3.0.2",
