@@ -1,0 +1,7 @@
+<h1 *ngIf="session">{{session.displayName || session.email}}</h1>
+<div *ngIf="!session">
+  <button ion-button outline (click)="signInWithGoogle()">Sign in with Google</button>
+</div>
+<div *ngIf="session">
+  <button ion-button outline (click)="signOut()">Logout</button>
+</div>

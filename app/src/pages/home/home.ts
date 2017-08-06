@@ -1,20 +1,22 @@
 import { Component } from '@angular/core';
 import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
+
 import { NavController } from 'ionic-angular';
 
-import { Movie } from "../movie/movie";
+import { MoviePage } from "../movie/movie";
+
 
 @Component({
-  selector: 'homepage',
+  selector: 'home-page',
   templateUrl: 'home.html'
 })
-export class Home {
+export class HomePage {
   public movies;
 
-  constructor(public navCtrl: NavController, http: Http) {
-    http.get('/api')
-    // http.get('https://tivika-api.herokuapp.com/')
+  constructor(public navCtrl: NavController, public http: Http) {
+    // http.get('/api')
+      http.get('https://tivika-api.herokuapp.com/')
       .map(res => res.json().results)
       .subscribe(movies => {
         movies.forEach(movie => {
@@ -27,6 +29,6 @@ export class Home {
   }
 
   displayMovie(movie) {
-    this.navCtrl.push(Movie, movie);
+    this.navCtrl.push(MoviePage, movie);
   }
 }

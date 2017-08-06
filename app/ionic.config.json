@@ -1,12 +1,5 @@
 {
-  "name": "Tivika",
+  "name": "tivikaapp",
   "app_id": "",
-  "v2": true,
-  "typescript": true,
-  "proxies": [
-    {
-      "path": "/api",
-      "proxyUrl": "https://tivika-api.herokuapp.com/"
-    }  
-  ]
+  "type": "ionic-angular"
 }

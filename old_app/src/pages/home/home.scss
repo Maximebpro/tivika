@@ -1,0 +1,16 @@
+homepage {
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .movie {
+    width: 45%;
+    margin: 10px 0;
+    h5 {
+      margin: 0;
+      text-align: center;
+    }
+  }
+}

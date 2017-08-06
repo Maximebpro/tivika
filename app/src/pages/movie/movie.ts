@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 
-
 enum Rate {
   None = undefined,
   Hate = 0,
@@ -13,10 +12,10 @@ enum Rate {
 const RateTypes = [Rate.None, Rate.Hate, Rate.Dislike, Rate.Like, Rate.Love]
 
 @Component({
-  selector: 'moviepage',
+  selector: 'movie-page',
   templateUrl: 'movie.html'
 })
-export class Movie {
+export class MoviePage {
   movie: any;
   rate: Rate;
  

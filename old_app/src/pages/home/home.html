@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Tivika</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h3>Discover</h3>
+
+  <div class="cards">
+    <div class="movie" *ngFor="let movie of movies" (click)="displayMovie(movie)">
+      <img [src]="movie.poster" alt="">
+      <h5>{{ movie.title }}</h5>
+    </div>
+  </div>
+
+  <button ion-button secondary menuToggle>Toggle Menu</button>
+</ion-content>
